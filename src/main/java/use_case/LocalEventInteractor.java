@@ -9,9 +9,11 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class LocalEventInteractor implements LocalEventInputBoundary{
+    private LocalEventOutputBoundary localEventOutputBoundary;
     private EventsDataAccessObject eventsDataAccessObject;
-    public LocalEventInteractor(EventsDataAccessObject eventsDataAccessObject){
+    public LocalEventInteractor(EventsDataAccessObject eventsDataAccessObject, LocalEventOutputBoundary localEventOutputBoundary){
         this.eventsDataAccessObject = eventsDataAccessObject;
+        this.localEventOutputBoundary = localEventOutputBoundary;
     }
     @Override
     public void createEvent(EventInputData eventInputData) {
@@ -21,6 +23,7 @@ public class LocalEventInteractor implements LocalEventInputBoundary{
                 eventInputData.getIsWork(), eventInputData.getPinned(), eventInputData.getSubEvents());
 
         eventsDataAccessObject.save(event);
+        localEventOutputBoundary.CreateEventSuccessView(eventInputData.getTitle());
     }
 
     @Override
