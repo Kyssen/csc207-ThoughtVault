@@ -1,4 +1,4 @@
-package use_case;
+package use_case.gcalevent;
 
 import use_case.gcalevent.GCalEventInputData;
 

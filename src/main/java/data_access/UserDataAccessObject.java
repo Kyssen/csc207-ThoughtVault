@@ -1,6 +1,6 @@
 package data_access;
 
-import entity.User;
+import entity.user.User;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

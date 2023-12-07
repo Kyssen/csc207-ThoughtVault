@@ -1,4 +1,4 @@
-package entity;
+package entity.user;
 
 public class User implements UserInterface {
     private final int userid;

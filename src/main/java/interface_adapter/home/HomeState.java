@@ -1,7 +1,7 @@
 package interface_adapter.home;
 
 import com.google.api.services.calendar.model.Event;
-import entity.Note;
+import entity.note.Note;
 
 import java.util.List;
 

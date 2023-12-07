@@ -1,7 +1,7 @@
 package view;
 
 import com.google.api.services.calendar.model.Event;
-import entity.Note;
+import entity.note.Note;
 import interface_adapter.ViewManagerModel;
 import interface_adapter.exportevents.ExportEventsViewModel;
 import interface_adapter.home.HomeState;

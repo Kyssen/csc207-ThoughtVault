@@ -1,6 +1,6 @@
 package data_access;
 
-import entity.LocalEvent;
+import entity.localEvent.LocalEvent;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
@@ -42,9 +42,10 @@ public class EventsDataAccessObject extends EntriesDataAccessObject<LocalEvent> 
                 JSONObject eventDetails = putEntryDetails(id);
 
                 eventDetails.put("date", entries.get(id).getDate().format(DateTimeFormatter.ISO_LOCAL_DATE));
-                LocalTime[] startEndTimes = entries.get(id).getStartEndTIme();
-                eventDetails.put("starttime", startEndTimes[0].format(DateTimeFormatter.ISO_LOCAL_TIME));
-                eventDetails.put("endtime", startEndTimes[1].format(DateTimeFormatter.ISO_LOCAL_TIME));
+                LocalTime startTime = entries.get(id).getStartTime();
+                LocalTime endTime = entries.get(id).getEndTime();
+                eventDetails.put("starttime", startTime.format(DateTimeFormatter.ISO_LOCAL_TIME));
+                eventDetails.put("endtime", endTime.format(DateTimeFormatter.ISO_LOCAL_TIME));
 
                 JSONArray subEventsJSON = new JSONArray();
                 subEventsJSON.addAll(entries.get(id).getDescendants());

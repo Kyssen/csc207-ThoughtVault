@@ -1,6 +1,6 @@
 package data_access;
 
-import entity.Note;
+import entity.note.Note;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;

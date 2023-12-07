@@ -1,7 +1,7 @@
 package use_case.user;
 
 import data_access.GCalDataAccessObject;
-import entity.User;
+import entity.user.User;
 
 import java.io.IOException;
 

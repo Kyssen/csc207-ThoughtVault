@@ -1,6 +1,6 @@
-package use_case.local_event;
+package data_access;
 
-import entity.Note;
+import entity.note.Note;
 
 import java.util.ArrayList;
 

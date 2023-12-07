@@ -1,6 +1,6 @@
 package use_case.user;
 
-import entity.User;
+import entity.user.User;
 
 public interface UserDataAccessInterface {
     User getUserByUsername(String username);

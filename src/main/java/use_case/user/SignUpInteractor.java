@@ -1,7 +1,7 @@
 package use_case.user;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
-import entity.User;
+import entity.user.User;
 
 public class SignUpInteractor implements SignUpInputBoundary{
     final UserDataAccessInterface userDataAccessObject;
